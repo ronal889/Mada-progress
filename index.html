@@ -4,267 +4,106 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MAD Progress</title>
-
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #101014;
-  color: white;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  border-bottom: 1px solid #29252a;
-}
-
-.logo {
-  font-size: 23px;
-  font-weight: bold;
-  color: #ff7899;
-}
-
-.logo span {
-  color: white;
-}
-
-.menu {
-  color: #ff7899;
-  font-size: 14px;
-}
-
-.hero {
-  text-align: center;
-  padding: 65px 20px 45px;
-}
-
-.badge {
-  display: inline-block;
-  background: #321d26;
-  color: #ff91aa;
-  padding: 9px 16px;
-  border-radius: 25px;
-  font-size: 12px;
-  margin-bottom: 25px;
-}
-
-h1 {
-  font-size: 34px;
-  line-height: 1.3;
-  margin-bottom: 18px;
-}
-
-h1 span {
-  color: #ff7899;
-}
-
-.hero p {
-  color: #bdb8bd;
-  line-height: 1.7;
-  font-size: 15px;
-  margin-bottom: 28px;
-}
-
-.button {
-  display: inline-block;
-  background: #ff7899;
-  color: #171015;
-  padding: 15px 27px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 5px;
-}
-
-.button2 {
-  background: transparent;
-  color: #ff91aa;
-  border: 1px solid #ff7899;
-}
-
-.section {
-  padding: 30px 20px;
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.card {
-  background: #1c1b21;
-  border: 1px solid #352a31;
-  padding: 23px;
-  border-radius: 15px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  color: #ff91aa;
-  margin-bottom: 12px;
-}
-
-.card p {
-  color: #c5c0c5;
-  line-height: 1.6;
-  font-size: 14px;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #aaa;
-  border-top: 1px solid #29252a;
-  font-size: 12px;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#101014;color:white}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px;border-bottom:1px solid #29252a}
+.logo{font-size:23px;font-weight:bold;color:#ff7899}.logo span{color:white}
+.menu{color:#ff7899;font-size:14px}
+.hero{text-align:center;padding:55px 20px 40px}
+.badge{display:inline-block;background:#321d26;color:#ff91aa;padding:9px 16px;border-radius:25px;font-size:12px;margin-bottom:25px}
+h1{font-size:34px;line-height:1.3;margin-bottom:18px}h1 span{color:#ff7899}
+.hero p{color:#bdb8bd;line-height:1.7;font-size:15px;margin-bottom:28px}
+.button{display:inline-block;background:#ff7899;color:#171015;padding:15px 27px;border-radius:10px;text-decoration:none;font-weight:bold;margin:5px}
+.button2{background:transparent;color:#ff91aa;border:1px solid #ff7899}
+.section{padding:30px 20px}.section h2{text-align:center;margin-bottom:25px}
+.card{background:#1c1b21;border:1px solid #352a31;padding:20px;border-radius:15px;margin-bottom:15px}
+.card h3{color:#ff91aa;margin-bottom:12px}.card p{color:#c5c0c5;line-height:1.6;font-size:14px}
+.vip-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.vip{background:#1c1c24;border:1px solid #39313a;border-radius:15px;padding:18px}
+.vip h3{margin-bottom:10px;color:#ff91aa}.vip p{color:#c5c0c5;line-height:1.6;font-size:14px}
+.vip .price{font-size:18px;font-weight:bold;color:#4caf50;margin-top:8px}
+.schedule{background:#1c1b21;border:1px solid #352a31;border-radius:12px;padding:16px;margin-bottom:12px}
+.schedule h3{color:#ff91aa;margin-bottom:7px}.schedule p{color:#ddd;line-height:1.6;font-size:14px}
+.note{font-size:12px!important;color:#aaa!important;margin-top:14px}
+.payments{display:grid;grid-template-columns:1fr;gap:10px}
+.payment{background:#24212a;border:1px solid #493541;padding:15px;border-radius:10px}
+.payment strong{color:#ff91aa}
+.notice{background:#30251a;border:1px solid #80613a;border-radius:12px;padding:15px;color:#f4d9aa;font-size:13px;line-height:1.6}
+footer{text-align:center;padding:25px;color:#aaa;border-top:1px solid #29252a;font-size:12px}
+@media(min-width:650px){.vip-grid{grid-template-columns:1fr 1fr}.payments{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
-
 <body>
-
 <header>
   <div class="logo">MAD <span>Progress</span> ❤️</div>
   <div class="menu">ESPACE MEMBRE</div>
 </header>
 
 <section class="hero">
-
   <div class="badge">BIENVENUE SUR MAD PROGRESS</div>
-
-  <h1>
-    Construisons votre<br>
-    <span>Progression</span>
-  </h1>
-
-  <p>
-    Découvrez MAD Progress, une plateforme
-    pensée pour accompagner vos projets,
-    votre évolution et vos ambitions.
-  </p>
-
-  <a href="#inscription" class="button">
-    Créer un compte
-  </a>
-
-  <a href="#connexion" class="button button2">
-    Se connecter
-  </a>
-
+  <h1>Construisons votre<br><span>Progression</span></h1>
+  <p>Découvrez MAD Progress, une plateforme pensée pour accompagner vos projets, votre évolution et vos ambitions.</p>
+  <a href="#inscription" class="button">Créer un compte</a>
+  <a href="#connexion" class="button button2">Se connecter</a>
 </section>
 
 <section class="section">
   <h2>Nos services</h2>
+  <div class="card"><h3>👤 Espace membre</h3><p>Un espace personnel pour suivre votre activité.</p></div>
+  <div class="card"><h3>📊 Suivi des activités</h3><p>Consultez vos informations et votre historique.</p></div>
+  <div class="card"><h3>🤝 Parrainage</h3><p>Un espace pour suivre vos invitations et votre réseau.</p></div>
+  <div class="card"><h3>🎧 Assistance</h3><p>Une rubrique dédiée à l'accompagnement des membres.</p></div>
+</section>
 
-  <div class="card">
-    <h3>👤 Espace membre</h3>
-    <p>Un espace personnel pour suivre votre activité.</p>
+<section class="section" id="vip">
+  <h2>🏆 Classement VIP</h2>
+  <p style="text-align:center;color:#aaa;margin-bottom:20px">Durée indiquée : 360 jours</p>
+  <div class="vip-grid">
+    <div class="vip"><h3>VIP1 - 58 000 Ar</h3><p>🎬 5 vidéos / jour - 450 Ar / tâche</p><p class="price">2 250 Ar / jour (montant annoncé)</p></div>
+    <div class="vip"><h3>VIP2 - 170 000 Ar</h3><p>🎬 10 vidéos / jour - 700 Ar / tâche</p><p class="price">7 000 Ar / jour (montant annoncé)</p></div>
+    <div class="vip"><h3>VIP3 - 560 000 Ar</h3><p>🎬 20 vidéos / jour - 1 100 Ar / tâche</p><p class="price">22 000 Ar / jour (montant annoncé)</p></div>
+    <div class="vip"><h3>⭐ S1 - 1 450 000 Ar</h3><p>🎬 45 vidéos / jour - 1 240 Ar / tâche</p><p class="price">55 000 Ar / jour (montant annoncé)</p></div>
+    <div class="vip"><h3>⭐ S2 - 3 400 000 Ar</h3><p>🎬 90 vidéos / jour - 1 400 Ar / tâche</p><p class="price">126 000 Ar / jour (montant annoncé)</p></div>
+    <div class="vip"><h3>⭐ S3 - 5 000 000 Ar</h3><p>🎬 150 vidéos / jour - 1 350 Ar / tâche</p><p class="price">200 500 Ar / jour (montant annoncé)</p></div>
+    <div class="vip"><h3>👑 A1 - 10 000 000 Ar</h3><p>🎬 300 vidéos / jour - 1 500 Ar / tâche</p><p class="price">450 000 Ar / jour (montant annoncé)</p></div>
+    <div class="vip"><h3>👑 A2 - 35 000 000 Ar</h3><p>🎬 500 vidéos / jour - 2 000 Ar / tâche</p><p class="price">1 300 500 Ar / jour (montant annoncé)</p></div>
+    <div class="vip"><h3>👑 A3 - 90 000 000 Ar</h3><p>🎬 1 000 vidéos / jour - 3 200 Ar / tâche</p><p class="price">3 200 000 Ar / jour (montant annoncé)</p></div>
   </div>
+  <p class="note">Les montants affichés sont des chiffres fournis pour la maquette et ne constituent pas une promesse de gain ni une garantie de paiement. Vérifiez les conditions réelles avant tout versement.</p>
+</section>
 
-  <div class="card">
-    <h3>📊 Suivi des activités</h3>
-    <p>Consultez vos informations et votre historique.</p>
+<section class="section" id="retraits">
+  <h2>💸 Horaires et jours de retrait</h2>
+  <div class="notice">Les demandes de retrait sont prévues entre <strong>09h00 et 17h00</strong>, selon le jour attribué à chaque niveau VIP.</div>
+  <div style="margin-top:15px">
+    <div class="schedule"><h3>Lundi</h3><p>VIP1 · VIP2 · S2</p></div>
+    <div class="schedule"><h3>Mardi</h3><p>VIP3 · A2 · S3</p></div>
+    <div class="schedule"><h3>Mercredi</h3><p>A1 · A3</p></div>
+    <div class="schedule"><h3>Jeudi</h3><p>S1</p></div>
+    <div class="schedule"><h3>Vendredi et samedi</h3><p>Aucun niveau de retrait n'est défini pour le moment.</p></div>
+    <div class="schedule"><h3>Dimanche</h3><p>🔒 Les tâches sont fermées. Aucune tâche ne peut être validée ce jour-là.</p></div>
   </div>
+</section>
 
-  <div class="card">
-    <h3>🤝 Parrainage</h3>
-    <p>Un espace pour suivre vos invitations et votre réseau.</p>
+<section class="section" id="paiement">
+  <h2>📲 Moyens de paiement</h2>
+  <p style="text-align:center;color:#aaa;margin-bottom:18px">Choisissez le service utilisé pour le paiement.</p>
+  <div class="payments">
+    <div class="payment">🟠 <strong>Orange Money</strong></div>
+    <div class="payment">🔵 <strong>Yas</strong></div>
+    <div class="payment">🔴 <strong>Airtel Money</strong></div>
   </div>
-
-  <div class="card">
-    <h3>🎧 Assistance</h3>
-    <p>Une rubrique dédiée à l'accompagnement des membres.</p>
-  </div>
+  <p class="note">Les moyens de paiement sont affichés à titre informatif. La validation réelle nécessite une intégration sécurisée avec les opérateurs ou un prestataire agréé. Ne partagez jamais votre code secret ni votre OTP.</p>
 </section>
 
 <section class="section" id="inscription">
-  <div class="card">
-    <h3>Créer un compte</h3>
-    <p>L'inscription sera disponible après la mise en place du système sécurisé.</p>
-  </div>
+  <div class="card"><h3>Créer un compte</h3><p>L'inscription sera disponible après la mise en place du système sécurisé.</p></div>
 </section>
-
 <section class="section" id="connexion">
-  <div class="card">
-    <h3>Connexion</h3>
-    <p>L'accès membre sera activé après la configuration du serveur.</p>
-  </div>
+  <div class="card"><h3>Connexion</h3><p>L'accès membre sera activé après la configuration du serveur.</p></div>
 </section>
 
-<footer>
-  © 2026 MAD Progress - Tous droits réservés.
-
+<footer>© 2026 MAD Progress - Tous droits réservés.</footer>
 </body>
 </html>
-<!-- CLASSEMENT VIP -->
-<section class="section" id="vip">
-  <h2 style="text-align:center; font-size:24px; margin-bottom:5px;">🏆 Classement VIP</h2>
-  <p style="text-align:center; color:#aaa; margin-bottom:20px;">Contrat de travail : 360 Jours</p>
-
-  <div style="display:flex; flex-direction:column; gap:15px;">
-
-    <div style="background:#1c1c24; border:1px solid #29252a; border-radius:15px; padding:20px;">
-      <h3>VIP1 - 58 000 Ar</h3>
-      <p style="color:#aaa;">🎬 5 Vidéo / jour - 450 Ar / tâche</p>
-      <p style="color:#4CAF50; font-weight:bold; font-size:18px;">💰 2 250 Ar / jour</p>
-    </div>
-
-    <div style="background:#1c1c24; border:1px solid #29252a; border-radius:15px; padding:20px;">
-      <h3>VIP2 - 170 000 Ar</h3>
-      <p style="color:#aaa;">🎬 10 Vidéo / jour - 700 Ar / tâche</p>
-      <p style="color:#4CAF50; font-weight:bold; font-size:18px;">💰 7 000 Ar / jour</p>
-    </div>
-
-    <div style="background:#1c1c24; border:1px solid #29252a; border-radius:15px; padding:20px;">
-      <h3>VIP3 - 560 000 Ar</h3>
-      <p style="color:#aaa;">🎬 20 Vidéo / jour - 1 100 Ar / tâche</p>
-      <p style="color:#4CAF50; font-weight:bold; font-size:18px;">💰 22 000 Ar / jour</p>
-    </div>
-
-    <div style="background:#2a1a00; border:1px solid #FFD700; border-radius:15px; padding:20px;">
-      <h3>⭐ S1 - 1 450 000 Ar</h3>
-      <p style="color:#aaa;">🎬 45 Vidéo / jour - 1 240 Ar / tâche</p>
-      <p style="color:#FFD700; font-weight:bold; font-size:18px;">💰 55 000 Ar / jour</p>
-    </div>
-
-    <div style="background:#2a1a00; border:1px solid #FFD700; border-radius:15px; padding:20px;">
-      <h3>⭐ S2 - 3 400 000 Ar</h3>
-      <p style="color:#aaa;">🎬 90 Vidéo / jour - 1 400 Ar / tâche</p>
-      <p style="color:#FFD700; font-weight:bold; font-size:18px;">💰 126 000 Ar / jour</p>
-    </div>
-
-    <div style="background:#2a1a00; border:1px solid #FFD700; border-radius:15px; padding:20px;">
-      <h3>⭐ S3 - 5 000 000 Ar</h3>
-      <p style="color:#aaa;">🎬 150 Vidéo / jour - 1 350 Ar / tâche</p>
-      <p style="color:#FFD700; font-weight:bold; font-size:18px;">💰 200 500 Ar / jour</p>
-    </div>
-
-    <div style="background:#1a0a2a; border:1px solid #a855f7; border-radius:15px; padding:20px;">
-      <h3>👑 A1 - 10 000 000 Ar</h3>
-      <p style="color:#aaa;">🎬 300 Vidéo / jour - 1 500 Ar / tâche</p>
-      <p style="color:#c084fc; font-weight:bold; font-size:18px;">💰 450 000 Ar / jour</p>
-    </div>
-
-    <div style="background:#1a0a2a; border:1px solid #a855f7; border-radius:15px; padding:20px;">
-      <h3>👑 A2 - 35 000 000 Ar</h3>
-      <p style="color:#aaa;">🎬 500 Vidéo / jour - 2 000 Ar / tâche</p>
-      <p style="color:#c084fc; font-weight:bold; font-size:18px;">💰 1 300 500 Ar / jour</p>
-    </div>
-
-    <div style="background:#1a0a2a; border:1px solid #a855f7; border-radius:15px; padding:20px;">
-      <h3>👑 A3 - 90 000 000 Ar</h3>
-      <p style="color:#aaa;">🎬 1000 Vidéo / jour - 3 200 Ar / tâche</p>
-      <p style="color:#c084fc; font-weight:bold; font-size:18px;">💰 3 200 000 Ar / jour</p>
-    </div>
-
-  </div>
-  <p style="text-align:center; color:#aaa; margin-top:15px; font-size:13px;">NB : Contrat de travail 360 Jours</p>
-</section>
